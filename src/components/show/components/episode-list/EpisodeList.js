@@ -52,9 +52,9 @@ EpisodeList.propTypes = {
           season: PropTypes.number.isRequired,
           number: PropTypes.number.isRequired,
           id: PropTypes.number.isRequired,
-          airdate: PropTypes.string.isRequired,
+          airdate: PropTypes.string.isRequired
         })
-      )
+      ).isRequired
     })
   )
 };

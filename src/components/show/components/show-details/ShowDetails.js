@@ -28,9 +28,9 @@ ShowDetails.propTypes = {
     summary: PropTypes.string.isRequired,
     image: PropTypes.shape({
       original: PropTypes.string,
-      medium: PropTypes.string,
-    }).isRequired,
-  }),
+      medium: PropTypes.string
+    }).isRequired
+  })
 };
 
 export default ShowDetails;

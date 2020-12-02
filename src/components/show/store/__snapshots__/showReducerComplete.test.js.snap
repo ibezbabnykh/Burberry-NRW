@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`show reducer episode list reducer should handle SHOW_EPISODE_LIST_FAILURE and return state 1`] = `
+Object {
+  "details": Object {
+    "data": null,
+    "error": null,
+    "loading": false,
+  },
+  "episodeList": Object {
+    "data": null,
+    "error": "Something went wrong",
+    "loading": false,
+  },
+}
+`;
+
+exports[`show reducer episode list reducer should handle SHOW_EPISODE_LIST_REQUEST and return state 1`] = `
+Object {
+  "details": Object {
+    "data": null,
+    "error": null,
+    "loading": false,
+  },
+  "episodeList": Object {
+    "data": null,
+    "error": null,
+    "loading": true,
+  },
+}
+`;
+
+exports[`show reducer episode list reducer should handle SHOW_EPISODE_LIST_SUCCESS and return state 1`] = `
+Object {
+  "details": Object {
+    "data": null,
+    "error": null,
+    "loading": false,
+  },
+  "episodeList": Object {
+    "data": Object {
+      "data": Array [
+        Object {
+          "season": "1",
+          "values": Array [
+            Object {
+              "airdate": "2016-04-11",
+              "id": 1,
+              "name": "episode 1x1",
+              "number": 1,
+              "season": 1,
+            },
+            Object {
+              "airdate": "2016-04-15",
+              "id": 2,
+              "name": "episode 1x2",
+              "number": 2,
+              "season": 1,
+            },
+          ],
+        },
+        Object {
+          "season": "2",
+          "values": Array [
+            Object {
+              "airdate": "2017-04-11",
+              "id": 3,
+              "name": "episode 2x1",
+              "number": 1,
+              "season": 2,
+            },
+            Object {
+              "airdate": "2017-04-15",
+              "id": 4,
+              "name": "episode 2x2",
+              "number": 2,
+              "season": 2,
+            },
+          ],
+        },
+      ],
+    },
+    "error": null,
+    "loading": false,
+  },
+}
+`;
+
+exports[`show reducer show details reducer should handle SHOW_DETAILS_FAILURE and return state 1`] = `
+Object {
+  "details": Object {
+    "data": null,
+    "error": "Something went wrong",
+    "loading": false,
+  },
+  "episodeList": Object {
+    "data": null,
+    "error": null,
+    "loading": false,
+  },
+}
+`;
+
+exports[`show reducer show details reducer should handle SHOW_DETAILS_REQUEST and return state 1`] = `
+Object {
+  "details": Object {
+    "data": null,
+    "error": null,
+    "loading": true,
+  },
+  "episodeList": Object {
+    "data": null,
+    "error": null,
+    "loading": false,
+  },
+}
+`;
+
+exports[`show reducer show details reducer should handle SHOW_DETAILS_SUCCESS and return state 1`] = `
+Object {
+  "details": Object {
+    "data": Object {
+      "image": Object {
+        "medium": "https://via.placeholder.com/250x140",
+        "original": "https://via.placeholder.com/1280x720",
+      },
+      "name": "show name",
+      "summary": "show summary",
+    },
+    "error": null,
+    "loading": false,
+  },
+  "episodeList": Object {
+    "data": null,
+    "error": null,
+    "loading": false,
+  },
+}
+`;

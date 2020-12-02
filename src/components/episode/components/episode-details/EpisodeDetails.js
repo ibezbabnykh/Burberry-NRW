@@ -33,9 +33,9 @@ EpisodeDetails.propTypes = {
     id: PropTypes.number.isRequired,
     image: PropTypes.shape({
       original: PropTypes.string,
-      medium: PropTypes.string,
+      medium: PropTypes.string
     })
-  }),
+  })
 };
 
 export default EpisodeDetails;
