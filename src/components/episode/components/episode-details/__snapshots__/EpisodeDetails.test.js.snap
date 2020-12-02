@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EpisodeDetails component should render 1`] = `
+<article
+  className="episode-details"
+>
+  <h1
+    className="episode-details_title"
+  >
+    episode name
+  </h1>
+  <div
+    className="episode-details_content"
+  >
+    <div
+      className="episode-details_img"
+    >
+      <a
+        href="https://via.placeholder.com/1280x720"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="episode name"
+          src="https://via.placeholder.com/250x140"
+          title="episode name"
+        />
+      </a>
+    </div>
+    <div
+      className="episode-details_description"
+    >
+      episode summary
+    </div>
+  </div>
+</article>
+`;

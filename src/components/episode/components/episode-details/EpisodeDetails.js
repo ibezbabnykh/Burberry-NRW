@@ -6,8 +6,8 @@ import './EpisodeDetails.scss';
 import { ImagePlaceholder } from '../../../common';
 
 const EpisodeDetails = ({ data }) => {
-  console.log('data', data);
-  const { id, name, image, summary } = data;
+  const { name, image, summary } = data;
+
   return (
     <article className="episode-details">
       <h1 className="episode-details_title">{name}</h1>

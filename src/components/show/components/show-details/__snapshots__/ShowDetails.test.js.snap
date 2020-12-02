@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowDetails component should render 1`] = `
+<article
+  className="show-details"
+>
+  <h1
+    className="show-details_title"
+  >
+    show name
+  </h1>
+  <div
+    className="show-details_content"
+  >
+    <div
+      className="show-details_img"
+    >
+      <a
+        href="https://via.placeholder.com/1280x720"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="show name"
+          src="https://via.placeholder.com/250x140"
+          title="show name"
+        />
+      </a>
+    </div>
+    <div
+      className="show-details_description"
+    >
+      show summary
+    </div>
+  </div>
+</article>
+`;
