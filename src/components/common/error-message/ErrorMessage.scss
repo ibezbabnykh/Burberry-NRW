@@ -1,0 +1,8 @@
+@import '../../../assets/style/variables.scss';
+
+.error-message {
+  font-size: $font-size-h3;
+  font-weight: 700;
+  text-align: center;
+  color: $color-message;
+}

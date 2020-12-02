@@ -1,0 +1,17 @@
+@import '../../../assets/style/variables.scss';
+
+.header {
+    background-color: $color-bg-header;
+    padding: 10px 0;
+
+    .logo {
+        color: $color-brand;
+        font-size: 24px;
+        font-weight: 700;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: $color-brand-hover;
+        }
+    }
+}

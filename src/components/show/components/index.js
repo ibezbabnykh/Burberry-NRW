@@ -1,0 +1,1 @@
+export { default as ShowPage } from './show-page';

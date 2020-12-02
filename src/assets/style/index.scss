@@ -1,0 +1,24 @@
+@import 'normalize.css/normalize.css';
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import 'variables.scss';
+
+body {
+  margin: 0;
+  font-family: $base-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: $color-brand;
+
+  &:visited {
+    color: $color-brand;
+  }
+
+  &:focus,
+  &:hover {
+    color: $color-brand-hover;
+  }
+}

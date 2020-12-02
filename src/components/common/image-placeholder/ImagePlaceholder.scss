@@ -1,0 +1,10 @@
+@import '../../../assets/style/variables.scss';
+
+.image-placeholder {
+    background-color: $color-message;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+}

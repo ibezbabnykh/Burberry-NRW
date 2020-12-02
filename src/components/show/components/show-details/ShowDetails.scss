@@ -1,0 +1,39 @@
+@import '../../../../assets/style/variables.scss';
+
+.show-details {
+  margin-bottom: 30px;
+  
+  &_content {
+    display: flex;
+    flex-flow: column;
+  
+    @media (min-width: $screen-sm) {
+      flex-flow: row;
+    }
+  }
+
+  &_title {
+    margin: 0 0 20px;
+  }
+
+  &_img {
+    margin-bottom: 20px;
+    text-align: center;
+
+    @media (min-width: $screen-sm) {
+      margin-right: 20px;
+    }
+
+    img {
+      vertical-align: top;
+    }
+  }
+
+  &_description {
+    flex-grow: 1;
+
+    p {
+      margin: 0 0 15px;
+    }
+  }
+}

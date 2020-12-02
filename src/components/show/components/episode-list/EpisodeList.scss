@@ -1,0 +1,57 @@
+@import '../../../../assets/style/variables.scss';
+
+.episode-list {
+  
+}
+
+.episode-season {
+  margin-bottom: 20px;
+
+  &_title {
+    font-size: $font-size-h3;
+    font-weight: 700;
+    color: $color-brand;
+    margin-bottom: 10px;
+  }
+
+  &-list {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: 1px solid $color-table-bg;
+    font-size: $font-size-h6;
+
+    &__header {
+      .episode-season-list__row {
+        background-color: $color-table-bg;
+      }
+    }
+
+    th,
+    td {
+      padding: 10px 5px 10px 10px;
+    }
+
+    &__row {
+      text-align: left;
+
+      &_number {
+        padding-left: 10px;
+      }
+
+      &_name {
+        font-weight: 700;
+      }
+
+      &_date {
+        width: 130px;
+      }
+    }
+
+    &__body {
+      .episode-season-list__row:nth-child(even) {
+        background-color: $color-table-bg;
+      }
+    }
+  }
+}

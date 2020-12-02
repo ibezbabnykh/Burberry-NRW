@@ -1,0 +1,37 @@
+//== typography
+$base-font-size: 16px;
+$font-size-h1: 36px;
+$font-size-h2: 28px;
+$font-size-h3: 24px;
+$font-size-h4: 20px;
+$font-size-h5: 16px;
+$font-size-h6: 14px;
+$font-fallback: sans-serif;
+
+$base-font-family: '-apple-system',
+'BlinkMacSystemFont',
+'Segoe UI',
+'Roboto',
+'Oxygen',
+'Ubuntu',
+'Cantarell',
+'Fira Sans',
+'Droid Sans',
+'Helvetica Neue',
+sans-serif,
+$font-fallback;
+
+//== Colors
+$color-bg-header: #3f3f3f;
+$color-brand: #3c948b;
+$color-brand-hover: lighten($color-brand, 10%);
+$color-bg: #fefefe;
+$color-table-bg: #f1f1f1;
+$color-message: #f1f1f1;
+
+//== Media queries breakpoints
+$screen-xs: 375px;
+$screen-xs-l: 600px;
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1200px;
