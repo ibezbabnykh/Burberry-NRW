@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EpisodePage component should render 1`] = `
+<ContextProvider
+  value={null}
+>
+  <EpisodePage
+    data={
+      Object {
+        "data": Object {
+          "id": 1,
+          "image": Object {
+            "medium": "https://via.placeholder.com/250x140",
+            "original": "https://via.placeholder.com/1280x720",
+          },
+          "name": "episode name",
+          "summary": "episode summary",
+        },
+      }
+    }
+    error={null}
+    loadEpisodeDetails={[Function]}
+    loading={false}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  />
+</ContextProvider>
+`;

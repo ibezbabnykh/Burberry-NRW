@@ -1,27 +1,21 @@
 import reducer from './showReducer';
 import * as types from './types';
 
-
+const initialState = {
+  details: {
+    data: null,
+    error: null,
+    loading: false
+  },
+  episodeList: {
+    data: null,
+    error: null,
+    loading: false
+  }
+};
 
 describe('show reducer', () => {
   describe('show details reducer', () => {
-    const initialState = {
-      data: null,
-      error: null,
-      loading: false
-    };
-
-    const mockResponse = {
-      image: {
-        medium: 'https://via.placeholder.com/250x140',
-        original: 'https://via.placeholder.com/1280x720'
-      },
-      name: 'show name',
-      summary: 'show summary'
-    }
-
-    const mockError = 'Something went wrong';
-
     it('should handle SHOW_DETAILS_REQUEST and return state', () => {
       const requestAction = {
         type: types.SHOW_DETAILS_REQUEST,
@@ -33,6 +27,14 @@ describe('show reducer', () => {
     });
 
     it('should handle SHOW_DETAILS_SUCCESS and return state', () => {
+      const mockResponse = {
+        image: {
+          medium: 'https://via.placeholder.com/250x140',
+          original: 'https://via.placeholder.com/1280x720'
+        },
+        name: 'show name',
+        summary: 'show summary'
+      }
       const successAction = {
         type: types.SHOW_DETAILS_SUCCESS,
         payload: mockResponse
@@ -43,6 +45,7 @@ describe('show reducer', () => {
     });
 
     it('should handle SHOW_DETAILS_FAILURE and return state', () => {
+      const mockError = 'Something went wrong';
       const failureAction = {
         type: types.SHOW_DETAILS_FAILURE,
         payload: mockError
@@ -54,14 +57,18 @@ describe('show reducer', () => {
   });
 
   describe('episode list reducer', () => {
-    const initialState = {
-      data: null,
-      error: null,
-      loading: false
-    };
+    it('should handle SHOW_EPISODE_LIST_REQUEST and return state', () => {
+      const requestAction = {
+        type: types.SHOW_EPISODE_LIST_REQUEST,
+        payload: 1
+      }
 
-    const mockResponse = {
-      data: [
+      const result = reducer(initialState, requestAction);
+      expect(result).toMatchSnapshot();
+    });
+
+    it('should handle SHOW_EPISODE_LIST_SUCCESS and return state', () => {
+      const mockResponse = [
         {
           season: '1',
           values: [
@@ -76,22 +83,7 @@ describe('show reducer', () => {
             { id: 4, number: 2, season: 2, name: 'episode 2x2', airdate: '2017-04-15' }
           ]
         }
-      ]
-    }
-
-    const mockError = 'Something went wrong';
-
-    it('should handle SHOW_EPISODE_LIST_REQUEST and return state', () => {
-      const requestAction = {
-        type: types.SHOW_EPISODE_LIST_REQUEST,
-        payload: 1
-      }
-
-      const result = reducer(initialState, requestAction);
-      expect(result).toMatchSnapshot();
-    });
-
-    it('should handle SHOW_EPISODE_LIST_SUCCESS and return state', () => {
+      ];
       const successAction = {
         type: types.SHOW_EPISODE_LIST_SUCCESS,
         payload: mockResponse
@@ -102,6 +94,7 @@ describe('show reducer', () => {
     });
 
     it('should handle SHOW_EPISODE_LIST_FAILURE and return state', () => {
+      const mockError = 'Something went wrong';
       const failureAction = {
         type: types.SHOW_EPISODE_LIST_FAILURE,
         payload: mockError

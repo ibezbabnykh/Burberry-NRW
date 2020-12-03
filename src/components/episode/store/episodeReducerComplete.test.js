@@ -1,24 +1,13 @@
 import reducer from './episodeReducer';
 import * as types from './types';
 
-const initialState = {
-  data: null,
-  error: null,
-  loading: false
-};
-
-const mockResponse = {
-  image: {
-    medium: 'https://via.placeholder.com/250x140',
-    original: 'https://via.placeholder.com/1280x720'
-  },
-  name: 'episode name',
-  summary: 'episode summary'
-}
-
-const mockError = 'Something went wrong';
-
 describe('episode reducer', () => {
+  const initialState = {
+    data: null,
+    error: null,
+    loading: false
+  };
+
   it('should handle EPISODE_DETAILS_REQUEST and return state', () => {
     const requestAction = {
       type: types.EPISODE_DETAILS_REQUEST,
@@ -30,6 +19,14 @@ describe('episode reducer', () => {
   });
 
   it('should handle EPISODE_DETAILS_SUCCESS and return state', () => {
+    const mockResponse = {
+      image: {
+        medium: 'https://via.placeholder.com/250x140',
+        original: 'https://via.placeholder.com/1280x720'
+      },
+      name: 'episode name',
+      summary: 'episode summary'
+    }
     const successAction = {
       type: types.EPISODE_DETAILS_SUCCESS,
       payload: mockResponse
@@ -40,6 +37,7 @@ describe('episode reducer', () => {
   });
 
   it('should handle EPISODE_DETAILS_FAILURE and return state', () => {
+    const mockError = 'Something went wrong';
     const failureAction = {
       type: types.EPISODE_DETAILS_FAILURE,
       payload: mockError
