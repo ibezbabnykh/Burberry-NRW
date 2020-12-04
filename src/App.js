@@ -3,8 +3,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import './App.scss';
 
-import { Header } from './components/common';
-import AppRoutes from './AppRoutes';
+import { Header } from 'components/common';
+import AppRoutes from 'AppRoutes';
 
 const App = () => {
   return (

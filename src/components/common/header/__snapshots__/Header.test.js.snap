@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should render 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="center-holder"
+  >
+    <Link
+      className="logo"
+      to="/"
+    >
+      TVMaze
+    </Link>
+  </div>
+</header>
+`;

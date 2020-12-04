@@ -1,8 +1,8 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { EPISODE, HOME, SHOW } from './routes/routesConfig';
-import { ShowPage } from './components/show';
-import { EpisodePage } from './components/episode';
+import { EPISODE, HOME, SHOW } from 'routes/routesConfig';
+import { ShowPage } from 'components/show';
+import { EpisodePage } from 'components/episode';
 
 const AppRoutes = () => (
   <Switch>

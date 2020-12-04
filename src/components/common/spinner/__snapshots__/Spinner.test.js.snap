@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner component should render 1`] = `
+<div
+  className="loadingio-spinner-rolling"
+>
+  <div
+    className="spinner"
+  >
+    <div />
+  </div>
+</div>
+`;

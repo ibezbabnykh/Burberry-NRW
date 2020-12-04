@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 
 import './EpisodeDetails.scss';
-import { ImagePlaceholder } from '../../../common';
+import { ImagePlaceholder } from 'components/common';
 
 const EpisodeDetails = ({ data }) => {
   const { name, image, summary } = data;

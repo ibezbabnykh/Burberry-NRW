@@ -1,12 +1,10 @@
 import { all, fork, call, put, takeLatest } from 'redux-saga/effects';
 
-import { fetchData } from '../../../api';
+import { URLS, fetchData } from 'api';
 import * as types from './types';
 import * as actions from './actions';
 
-import { URLS } from '../../../api';
-
-function* getEpisodeData(action) {
+export function* getEpisodeData(action) {
   try {
     const data = yield call(fetchData, `${URLS.episodes}/${action.payload}`);
     yield put(actions.loadEpisodeDetailsSuccess(data));
@@ -15,11 +13,11 @@ function* getEpisodeData(action) {
   }
 }
 
-function* fetchEpisode() {
+export function* fetchEpisode() {
   yield takeLatest(types.EPISODE_DETAILS_REQUEST, getEpisodeData);
 }
 
-export function* showEpisode() {
+export default function* showEpisode() {
   yield all([
     fork(fetchEpisode)
   ])

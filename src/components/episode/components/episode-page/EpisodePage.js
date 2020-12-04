@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import './EpisodePage.scss';
+import { Spinner, ErrorMessage } from 'components/common';
 import { loadEpisodeDetails } from '../../store/actions';
-import { Spinner, ErrorMessage } from '../../../common';
 import EpisodeDetails from '../episode-details';
 
-const EpisodePage = ({ loadEpisodeDetails, data, error, loading }) => {
+const EpisodePage = ({ data, error, loading }) => {
   const { id } = useParams();
   const dispatch = useDispatch();
 
@@ -35,9 +33,4 @@ const mapStateToProps = ({ episode: { data, error, loading } }) => ({
   data, error, loading
 })
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({
-    loadEpisodeDetails
-  }, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(EpisodePage);
+export default connect(mapStateToProps)(EpisodePage);

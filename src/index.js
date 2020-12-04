@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import './assets/style/index.scss';
-import App from './App';
+import 'assets/style/index.scss';
+import App from 'App';
 
-import store from './AppStore';
+import store from 'AppStore';
 
 ReactDOM.render(
   <React.StrictMode>

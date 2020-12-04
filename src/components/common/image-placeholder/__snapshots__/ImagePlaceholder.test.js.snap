@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImagePlaceholder component should render 1`] = `
+<div
+  className="image-placeholder"
+>
+  Image not found
+</div>
+`;

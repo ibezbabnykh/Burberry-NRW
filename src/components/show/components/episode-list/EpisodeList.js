@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import dateFormat from 'dateformat';
 
 import './EpisodeList.scss';
-import { EPISODE } from '../../../../routes/routesConfig';
+import { EPISODE } from 'routes/routesConfig';
 
 const renderEpisodeSeasonItem = (episode) => (
   <tr key={episode.id} className="episode-season-list__row">

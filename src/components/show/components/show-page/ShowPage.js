@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import './ShowPage.scss';
+import { useShow } from 'hooks';
 import { loadShowDetails, loadEpisodeList } from '../../store/actions';
-import { useShow } from '../../../../hooks';
-import { Spinner, ErrorMessage } from '../../../common';
+import { Spinner, ErrorMessage } from 'components/common';
 import ShowDetails from '../show-details';
 import EpisodeList from '../episode-list';
 
@@ -27,7 +25,7 @@ const renderDetails = (error, loading, detailsData, episodeListData) => {
   );
 };
 
-const ShowPage = ({ loadShowDetails, loadEpisodeList }) => {
+const ShowPage = () => {
   const { id } = useParams();
   const { detailsData, episodeListData, error, loading } = useShow();
   const dispatch = useDispatch();
@@ -41,10 +39,4 @@ const ShowPage = ({ loadShowDetails, loadEpisodeList }) => {
   );
 }
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({
-    loadShowDetails,
-    loadEpisodeList
-  }, dispatch);
-
-export default connect(null, mapDispatchToProps)(ShowPage);
+export default ShowPage;
